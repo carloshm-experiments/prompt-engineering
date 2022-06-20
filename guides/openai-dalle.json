@@ -8,7 +8,7 @@
    "Comma (,) could be changed interchangeably with 'as' at the end of the phrase",
    "Synonyms may work as expected such as using 'single line' instead of 'one-line drawing'",
    "Styles could start the phrase or end it with comma"
- ]
+ ],
  "tokens":[
    {
      "name":"style",
