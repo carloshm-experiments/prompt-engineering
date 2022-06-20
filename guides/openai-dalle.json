@@ -1,0 +1,64 @@
+{
+ "company": "Open-AI",
+ "name": "DALL-E",
+ "description": "Prompt structure with examples for interacting with the model",
+ "version": "DALL-E 2 - 2022",
+ "url": "https://openai.com/dall-e-2/",
+ "rules": [
+   "Comma (,) could be changed interchangeably with 'as' at the end of the phrase",
+   "Synonyms may work as expected such as using 'single line' instead of 'one-line drawing'",
+   "Styles could start the phrase or end it with comma"
+ ]
+ "tokens":[
+   {
+     "name":"style",
+     "type": "dictionary",
+     "description":"It mentions a style to be used in the generation of the image",
+     "values":[
+        "pixel art",
+        "digital art",
+        "line drawing",
+        "one-line drawing",
+        "ukiyo-e",
+        "impressionist",
+        "hand drawn sketch",
+        "ballpoint pen",
+        "3d render"
+     ]     
+   },
+   {
+     "name":"material-type",
+     "type": "dictionary",
+     "description":"It includes a type of material the model should use to generate the image",
+     "values":["on a notebook"]     
+   }
+ ],
+ "samples": [
+   {
+     "text": "An astronaut lounging in a tropical resort in space, {style} on a {material-type}",
+     "tokens": [
+       {
+         "name": "style",
+         "value": "pixel art"
+       },
+       {
+         "name": "material-type",
+         "value": "notebook"
+       }
+     ]
+   },
+   {
+     "text": "A {style} of an astronaut walking in a green desert",
+     "tokens": [
+       {
+         "name": "style",
+         "value": "3d render"
+       },
+       {
+         "name": "material-type",
+         "value": "on a notebook"
+       }
+     ]
+   }
+ ]
+}
