@@ -87,6 +87,16 @@
   ],
   "samples": [
     {
+      "text": "An astronaut lounging in a tropical resort in space, {style}",
+      "url": "https://raw.githubusercontent.com/carloshm/prompt-engineering/main/images/openai/dall-e/An%20astronaut%20lounging%20in%20a%20tropical%20resort%20in%20space%2C%20vaporwave.jpg",
+      "tokens": [
+        {
+          "name": "style",
+          "value": "vaporwave"
+        }
+      ]
+    },
+    {
       "text": "An astronaut lounging in a tropical resort in space, {style} on a {material}",
       "tokens": [
         {
