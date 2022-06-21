@@ -1,64 +1,178 @@
 {
- "company": "Open-AI",
- "name": "DALL-E",
- "description": "Prompt structure with examples for interacting with the model",
- "version": "DALL-E 2 - 2022",
- "url": "https://openai.com/dall-e-2/",
- "rules": [
-   "Comma (,) could be changed interchangeably with 'as' at the end of the phrase",
-   "Synonyms may work as expected such as using 'single line' instead of 'one-line drawing'",
-   "Styles could start the phrase or end it with comma"
- ],
- "tokens":[
-   {
-     "name":"style",
-     "type": "dictionary",
-     "description":"It mentions a style to be used in the generation of the image",
-     "values":[
+  "company": "Open-AI",
+  "name": "DALL-E",
+  "description": "Prompt structure with examples for interacting with the model",
+  "version": "DALL-E 2 - 2022",
+  "url": "https://openai.com/dall-e-2/",
+  "risks-limitations": "https://github.com/openai/dalle-2-preview/blob/main/system-card.md",
+  "rules": [
+    "Styles or general rules should be reviewed ",
+    "Comma (,) could be changed interchangeably with 'as' at the end of the phrase",
+    "Comma (,) could be changed interchangeably with 'by' when talking about authorship",
+    "Synonyms may work as expected such as using 'single line' instead of 'one-line drawing'",
+    "Styles could start the phrase or end it with comma",
+    "The more detailed the scene is, such as the use of adjectives 'dark blue background' the better"
+  ],
+  "tokens": [
+    {
+      "name": "style",
+      "type": "dictionary",
+      "description": "It mentions a style to be used in the generation of the image",
+      "values": [
         "pixel art",
         "digital art",
-        "line drawing",
-        "one-line drawing",
         "ukiyo-e",
         "impressionist",
+        "synthwave",
+        "cyberpunk",
+        "vaporwave",
+        "studio shot",
+        "stock photo"
+      ]
+    },
+    {
+      "name": "perspective",
+      "type": "dictionary",
+      "descripiton": "It describes the way the image will appear based on the angle of the photo from the observer.",
+      "values":[
+        "cenital angle photo",
+        "long shot",
+        "medium shot",
+        "Close-up shot",
+        "Bird's-eye view",
+        "High angle view",
+        "Eye level view",
+        "Low angle view",
+        "Worm's-eye view"
+      ]
+    },
+    {
+      "name": "texture",
+      "type": "dictionary",
+      "description": "It mentions the shape type the model should consider to create the image",
+      "values": [
+        "line drawing",
+        "one-line drawing",
         "hand drawn sketch",
         "ballpoint pen",
-        "3d render"
-     ]     
-   },
-   {
-     "name":"material-type",
-     "type": "dictionary",
-     "description":"It includes a type of material the model should use to generate the image",
-     "values":["on a notebook"]     
-   }
- ],
- "samples": [
-   {
-     "text": "An astronaut lounging in a tropical resort in space, {style} on a {material-type}",
-     "tokens": [
-       {
-         "name": "style",
-         "value": "pixel art"
-       },
-       {
-         "name": "material-type",
-         "value": "notebook"
-       }
-     ]
-   },
-   {
-     "text": "A {style} of an astronaut walking in a green desert",
-     "tokens": [
-       {
-         "name": "style",
-         "value": "3d render"
-       },
-       {
-         "name": "material-type",
-         "value": "on a notebook"
-       }
-     ]
-   }
- ]
+        "3d render",
+        "oil painting"
+      ]
+    },
+    {
+      "name": "material",
+      "type": "dictionary",
+      "description": "It includes a type of material the model should use to generate the image",
+      "values": [
+        "notebook"
+      ]
+    },
+    {
+      "name": "emphasis",
+      "type": "dictionary",
+      "description": "It includes a word to emphasise detail of a subject in the image",
+      "values": [
+        "cute"
+      ]
+    },
+    {
+      "name": "ressemblance",
+      "type": "dictionary",
+      "description": "It includes a known character as the fictional author of the image",
+      "values": [
+        "Matisse",
+        "van Gogh style painting"
+      ]
+    }
+  ],
+  "samples": [
+    {
+      "text": "An astronaut lounging in a tropical resort in space, {style} on a {material}",
+      "tokens": [
+        {
+          "name": "style",
+          "value": "pixel art"
+        },
+        {
+          "name": "material-type",
+          "value": "notebook"
+        }
+      ]
+    },
+    {
+      "text": "A {texture} of an astronaut walking in a green desert",
+      "tokens": [
+        {
+          "name": "texture",
+          "value": "3d render"
+        }
+      ]
+    },
+    {
+      "text": "{texture} of a pink balloon dog in a violet room",
+      "tokens": [
+        {
+          "name": "texture",
+          "value": "3d render"
+        }
+      ]
+    },
+    {
+      "text": "{style} sports car",
+      "tokens": [
+        {
+          "name": "style",
+          "value": "Synthwave"
+        }
+      ]
+    },
+    {
+      "text": "{texture} of a {emphasis} tropical fish in an aquarium on a dark blue background, {style}",
+      "tokens": [
+        {
+          "name": "texture",
+          "value": "3d render"
+        },
+        {
+          "name": "style",
+          "value": "digital art"
+        },
+        {
+          "name": "emphasis",
+          "value": "cute"
+        }
+      ]
+    },
+    {
+      "text": "An {texture} by {ressemblance} of a humanoid robot playing chess",
+      "tokens": [
+        {
+          "name": "texture",
+          "value": "oil painting"
+        },
+        {
+          "name": "ressemblance",
+          "value": "Matisse"
+        }
+      ]
+    },
+    {
+      "text": "A {ressemblance} of an American football player",
+      "tokens": [
+        {
+          "name": "ressemblance",
+          "value": "Matisse"
+        }
+      ]
+    },
+    {
+      "text": "'A sea otter with a pearl earring' by {ressemblance}",
+      "tokens": [
+        {
+          "name": "ressemblance",
+          "value": "Johannes Vermeer"
+        }
+      ]
+    }           
+  ]
 }
