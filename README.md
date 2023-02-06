@@ -20,6 +20,10 @@ Guide to interact with different AI models through NLI (Natural Language Interac
 
 [manifest and samples](/guides/)
 
+## Database
+
+https://promptbase.com/
+
 ## Services
 
 https://github.com/hwchase17/langchain
